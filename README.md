@@ -1,2 +1,1 @@
-Quick Project for the 72h Game Jam hosted on https://itch.io/jam/mini-jam-198-speed with the theme of "There is no end"
-My goal for this jam is to deliver a quick prototype made in 2 days where I will work on reinforcing my object pooling and my procedural generation skills
+Simple silly tool I made up while doing another project to paint with some different colors alternating depth by a sinus function over time
