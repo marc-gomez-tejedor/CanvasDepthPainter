@@ -35,22 +35,22 @@ public class PlayerAimAndShoot : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             // spawn bullets
-            Instantiate(bulletLeftClick, bulletSpawnPoint.position, gun.transform.rotation);
-            
+            ObjectPoolManager.SpawnObject(bulletLeftClick, bulletSpawnPoint.position, gun.transform.rotation, ObjectPoolManager.PoolType.GameObject);
+
             // particles
-            Instantiate(particlesLeftClick, bulletSpawnPoint.position, gun.transform.rotation);
+            ObjectPoolManager.SpawnObject(particlesLeftClick, bulletSpawnPoint.position, gun.transform.rotation, ObjectPoolManager.PoolType.ParticleSystem);
         }
         if (Input.GetMouseButton(1))
         {
             // spawn bullets
-            Instantiate(bulletRightClick, bulletSpawnPoint.position, gun.transform.rotation);
-            
+            ObjectPoolManager.SpawnObject(bulletRightClick, bulletSpawnPoint.position, gun.transform.rotation, ObjectPoolManager.PoolType.GameObject);
+
             // particles
-            Instantiate(particlesRightClick, bulletSpawnPoint.position, gun.transform.rotation);
+            ObjectPoolManager.SpawnObject(particlesRightClick, bulletSpawnPoint.position, gun.transform.rotation, ObjectPoolManager.PoolType.ParticleSystem);
         }
         if (Input.GetMouseButton(3))
         {
-            Instantiate(circleThing, bulletSpawnPoint);
+            ObjectPoolManager.SpawnObject(circleThing, bulletSpawnPoint);
         }
     }
 }
