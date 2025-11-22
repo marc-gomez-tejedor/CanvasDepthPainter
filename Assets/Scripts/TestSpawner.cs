@@ -4,6 +4,7 @@ public class TestSpawner : MonoBehaviour
 {
     GameObject _objectToSpawn;
     float time;
+    float size = 0.5f;
 
     [SerializeField]
     GameObject[] objectsToChoose;
@@ -26,5 +27,10 @@ public class TestSpawner : MonoBehaviour
     public void SwapSpawnedObj(int id)
     {
         _objectToSpawn = objectsToChoose[id];
+    }
+    public void ChangeSize(float s)
+    {
+        size = s;
+        _objectToSpawn.transform.localScale = Vector3.one * size;
     }
 }
